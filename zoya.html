@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zoya Portfolio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: #0D1321; color: #f5f5f5; line-height: 1.7; }
+
+    .navbar { position: fixed; top: 0; width: 100%; background: #748CAB; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); z-index: 1000; }
+    .navbar .logo { font-weight: 900; font-size: 1.7rem; color: #0D1321; }
+    .navbar a { color: #f5f5f5; margin: 0 1.5rem; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 3px; transition: color 0.4s ease; }
+    .navbar a:hover { color: #0D1321; }
+
+    .hero-inner { display: flex; align-items: center; gap: 2rem; max-width: 1000px; margin: 7rem auto 3rem; padding: 1rem; }
+    .profile-wrapper img { width: 300px; height: 300px; border-radius: 50%; object-fit: cover; border: 3px solid #fff; box-shadow: 0 8px 20px rgba(255,255,255,0.2); }
+    .hero-text { flex: 1; font-size: 1.3rem; }
+    .hero-text h1 { font-size: 3rem; margin-bottom: 1rem; }
+
+    .section { padding: 4rem 2rem; max-width: 1200px; margin: 0 auto; }
+    .section h2 { font-size: 2.8rem; font-weight: 700; text-align: center; color: #f5f5f5; margin-bottom: 2rem; }
+
+    /* About Section */
+    .about-content { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+    .about-card { background: #1e1e1e; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); text-align: center; }
+    .about-card h3 { margin-bottom: 0.5rem; color: #fff; }
+
+    /* Skills Section */
+    .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; justify-items: center; }
+    .skills-grid div { background: transparent; color: #fff; padding: 1rem; border-radius: 12px; text-align: center; font-weight: 500; display: flex; flex-direction: column; align-items: center; gap: 5px; opacity: 0; transform: scale(0.8); transition: all 0.6s ease-out; }
+    .skills-grid div img { width: 50px; height: 50px; }
+    .skills-grid div.show { opacity: 1; transform: scale(1); }
+
+    /* Projects */
+    .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+    .project-card { background: #1e1e1e; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+    .project-card img { width: 100%; height: 180px; object-fit: cover; border-bottom: 2px solid #000; }
+
+    /* Contact */
+    #contact img { width: 70px; height: 70px; }
+
+    footer { background: #1a1a1a; color: #fff; padding: 2rem; text-align: center; }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">SZN</div>
+    <div>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <div class="hero-inner">
+    <div class="profile-wrapper"><img src="PFP.jpg" alt="My Profile"></div>
+    <div class="hero-text">
+      <h1>Hello! This is Syeda Zoya :)</h1>
+      <p>An undergraduate with passion for coding, web development, and innovative skills. I use HTML, JavaScript, and CSS for vibrant, playful designs. Dedicated to learning new technologies, building practical projects, and applying creative approaches to craft efficient digital solutions.</p>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <div class="about-card"><h3>Education</h3><p>Intermediate (ICS) - 2024 │ Matric (CompSci) - 2022</p></div>
+      <div class="about-card"><h3>Academics</h3><p>Secured A grade in both school and college. Recognized for consistent hard work and improvement throughout studies.</p></div>
+      <div class="about-card"><h3>Key Strengths</h3><p>Solution-Oriented │ Positive Attitude │ Time Management</p></div>
+      <div class="about-card"><h3>Languages</h3><p>Proficient in Urdu & English</p></div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div><img src="can.png" alt=""><span>Canva</span></div>
+      <div><img src="c.png" alt=""><span>C++</span></div>
+      <div><img src="hc.png" alt=""><span>HTML/CSS</span></div>
+      <div><img src="js.png" alt=""><span>JavaScript</span></div>
+      <div><img src="ms.png" alt=""><span>Microsoft Office</span></div>
+      <div><img src="ed.png" alt=""><span>Editing/Designing</span></div>
+      <div><img src="ps.png" alt=""><span>Problem Solving</span></div>
+      <div><img src="id.png" alt=""><span>Critical Thinking</span></div>
+      <div><img src="ct.png" alt=""><span>Creativity & Innovation</span></div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card"><img src="TODO.PNG" alt="To Do list"><h3>TO DO LIST</h3><p>Created a simple to-do list application with JavaScript for dynamic task management.
+<a href="https://github.com/Zoya-22/To-do-list">Click Me</a>
+        
+
+      </p>
+    
+      
+      
+      </div>
+      <div class="project-card"><img src="calu.png" alt="Calculator"><h3>Calculator</h3><p>Developed a functional calculator using HTML, CSS, and JavaScript.</p>
+        <a href="https://github.com/Zoya-22/Projects">Click Me</a>
+
+        </div>
+      <div class="project-card"><img src="laun.png" alt="Laundry Website"><h3>Laundry Website</h3><p>A service website for a laundry business.</p>
+      
+      <a href="https://github.com/Zoya-22/laundary-">Click Me</a>
+      </div>
+    
+    
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <div style="display:flex; justify-content:center; gap:2rem;">
+      <a href="https://www.instagram.com/_.out_of.service"> <img src="in.png" alt="Instagram"></a>
+      <a href="https://wa.me/+923198266936"> <img src="wa.png" alt="WhatsApp"></a>
+      <a href=""> <img src="gm.png" alt="Gmail"></a>
+    </div>
+  </section>
+
+  <footer><p>Designed and Developed by Zoya | 2025. All rights reserved.</p></footer>
+
+<script>
+// Skills Animation on Scroll
+const skillItems = document.querySelectorAll('.skills-grid div');
+window.addEventListener('scroll', () => {
+  const trigger = window.innerHeight * 0.8;
+  skillItems.forEach(item => {
+    const rect = item.getBoundingClientRect();
+    if (rect.top < trigger) {
+      item.classList.add('show');
+    }
+  });
+});
+</script>
+
+</body>
+</html>
